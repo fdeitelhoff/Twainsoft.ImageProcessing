@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B39B7F8E-C2D1-4B97-A49E-93C794E5AFA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twainsoft.ImageProcessing.GUI</RootNamespace>
+    <AssemblyName>Twainsoft.ImageProcessing.GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\FrmDataInfoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FrmDataInfoBase.Designer.cs">
+      <DependentUpon>FrmDataInfoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\FrmToolboxBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\FrmToolboxBase.Designer.cs">
+      <DependentUpon>FrmToolboxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contracts\IFrmToolboxEBCDebugData.cs" />
+    <Compile Include="Contracts\IFrmToolboxEBCErrors.cs" />
+    <Compile Include="Contracts\IFrmToolboxElapsedTime.cs" />
+    <Compile Include="Contracts\IFrmToolboxEBCData.cs" />
+    <Compile Include="Contracts\IFrmToolboxShapes.cs" />
+    <Compile Include="Controls\PaintLeaf\UcPaintLeaf.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PaintLeaf\UcPaintLeaf.Designer.cs">
+      <DependentUpon>UcPaintLeaf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShapesListView\ShapeListViewItem.cs" />
+    <Compile Include="Forms\DataInfos\FrmDiagramInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataInfos\FrmDiagramInfo.Designer.cs">
+      <DependentUpon>FrmDiagramInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxEBCDebugData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxEBCDebugData.Designer.cs">
+      <DependentUpon>FrmToolboxEBCDebugData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxEBCErrors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxEBCErrors.Designer.cs">
+      <DependentUpon>FrmToolboxEBCErrors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxElapsedTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxElapsedTime.Designer.cs">
+      <DependentUpon>FrmToolboxElapsedTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxEBCOutputData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxEBCOutputData.Designer.cs">
+      <DependentUpon>FrmToolboxEBCOutputData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxShapes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Toolboxes\FrmToolboxShapes.Designer.cs">
+      <DependentUpon>FrmToolboxShapes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Base\FrmDataInfoBase.resx">
+      <DependentUpon>FrmDataInfoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\FrmToolboxBase.resx">
+      <DependentUpon>FrmToolboxBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PaintLeaf\UcPaintLeaf.resx">
+      <DependentUpon>UcPaintLeaf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataInfos\FrmDiagramInfo.resx">
+      <DependentUpon>FrmDiagramInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Toolboxes\FrmToolboxEBCDebugData.resx">
+      <DependentUpon>FrmToolboxEBCDebugData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Toolboxes\FrmToolboxEBCErrors.resx">
+      <DependentUpon>FrmToolboxEBCErrors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Toolboxes\FrmToolboxElapsedTime.resx">
+      <DependentUpon>FrmToolboxElapsedTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Toolboxes\FrmToolboxEBCOutputData.resx">
+      <DependentUpon>FrmToolboxEBCOutputData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Toolboxes\FrmToolboxShapes.resx">
+      <DependentUpon>FrmToolboxShapes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.Common\Twainsoft.ImageProcessing.Common.csproj">
+      <Project>{6905B7F8-675C-4E8C-84B8-EAAD89F51373}</Project>
+      <Name>Twainsoft.ImageProcessing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.EBC\Twainsoft.ImageProcessing.EBC.csproj">
+      <Project>{0B930A36-C5C9-4DC3-B3F2-9DCDED9868B4}</Project>
+      <Name>Twainsoft.ImageProcessing.EBC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.GUI.Common\Twainsoft.ImageProcessing.GUI.Common.csproj">
+      <Project>{1EC5826D-3D1B-4503-A4E1-81D00A97E6C8}</Project>
+      <Name>Twainsoft.ImageProcessing.GUI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.Shapes\Twainsoft.ImageProcessing.Shapes.csproj">
+      <Project>{A991266D-7D3B-4B57-B278-7F49A1CB25A1}</Project>
+      <Name>Twainsoft.ImageProcessing.Shapes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diagram.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShapeIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearAll.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

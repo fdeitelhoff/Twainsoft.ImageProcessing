@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B930A36-C5C9-4DC3-B3F2-9DCDED9868B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twainsoft.ImageProcessing.EBC</RootNamespace>
+    <AssemblyName>Twainsoft.ImageProcessing.EBC</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Adapter\ImageLoadAdapter.cs" />
+    <Compile Include="Components\Adapter\ImageSaveAdapter.cs" />
+    <Compile Include="Components\Base\EBCBase.cs" />
+    <Compile Include="Components\Contrast\IncreaseContrast.cs" />
+    <Compile Include="Components\Examples\BottleCheck.cs" />
+    <Compile Include="Components\Execution\ExecutionController.cs" />
+    <Compile Include="Components\FloodFilling\FloodFill.cs" />
+    <Compile Include="Components\Gradient\GradientIn.cs" />
+    <Compile Include="Components\Gradient\GradientOut.cs" />
+    <Compile Include="Components\Histogram\CumulativeHistogram.cs" />
+    <Compile Include="Components\Histogram\GrayValueHistogram.cs" />
+    <Compile Include="Components\Histogram\HistogramEqualiziation.cs" />
+    <Compile Include="Components\LUT\LookUpTable.cs" />
+    <Compile Include="Components\Operations\Addition.cs" />
+    <Compile Include="Components\Operations\ROICenter.cs" />
+    <Compile Include="Components\Ranking\Closing.cs" />
+    <Compile Include="Components\Ranking\Dilatation.cs" />
+    <Compile Include="Components\Ranking\Erodation.cs" />
+    <Compile Include="Components\Ranking\Laplace.cs" />
+    <Compile Include="Components\Ranking\Median.cs" />
+    <Compile Include="Components\Ranking\Opening.cs" />
+    <Compile Include="Components\Thresh\Threshold.cs" />
+    <Compile Include="Components\Vocabulary\Messages\TransferMessage.cs" />
+    <Compile Include="Components\Misc\ImageCache.cs" />
+    <Compile Include="Components\Misc\ImageRepeater.cs" />
+    <Compile Include="Components\Misc\ReceiveImage.cs" />
+    <Compile Include="Components\Misc\SendImage.cs" />
+    <Compile Include="Components\WCF\TransferMessageClient.cs" />
+    <Compile Include="Components\Operations\Subtraction.cs" />
+    <Compile Include="Components\Portals\PaintLeafPortal.cs" />
+    <Compile Include="Components\Portals\ShapeCollectorPortal.cs" />
+    <Compile Include="Components\Scan\EllipseScan.cs" />
+    <Compile Include="Components\Scan\LineScan.cs" />
+    <Compile Include="Components\Shapes\ShapeController.cs" />
+    <Compile Include="Components\Shapes\ShapeCollector.cs" />
+    <Compile Include="Components\Shapes\STEConnector.cs" />
+    <Compile Include="Components\Vocabulary\Data\EBCExecutionTimeData.cs" />
+    <Compile Include="Components\Vocabulary\Data\EBCMessageData.cs" />
+    <Compile Include="Components\Vocabulary\Data\EBCOutputData.cs" />
+    <Compile Include="Components\Vocabulary\Data\EBCOutputDataTypes.cs" />
+    <Compile Include="Components\Vocabulary\Data\ShapeGroups.cs" />
+    <Compile Include="Components\Vocabulary\Data\ShapeInfoData.cs" />
+    <Compile Include="Components\Vocabulary\Exceptions\CircularConnectionException.cs" />
+    <Compile Include="Components\Vocabulary\Exceptions\ShapeConnectionException.cs" />
+    <Compile Include="Components\Vocabulary\Exceptions\STEAutoConnectionException.cs" />
+    <Compile Include="Components\Vocabulary\Messages\AddShapeMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\AvailableShapesMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\DisconnectEBCMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\EBCDebugMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\EBCMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ConnectEBCMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\EBCExceptionMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ErrorMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ExecuteFirstEBCMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ExecutionFinishedMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\STEConnectMessage.cs" />
+    <Compile Include="Components\WCF\TransferMessageServer.cs" />
+    <Compile Include="Contracts\Adapter\IImageLoadAdapter.cs" />
+    <Compile Include="Contracts\Adapter\IImageSaveAdapter.cs" />
+    <Compile Include="Contracts\Base\IEBCBase.cs" />
+    <Compile Include="Contracts\Contrast\IIncreaseContrast.cs" />
+    <Compile Include="Contracts\Examples\IBottleCheck.cs" />
+    <Compile Include="Contracts\Execution\IExecutionController.cs" />
+    <Compile Include="Contracts\FloodFilling\IFloodFill.cs" />
+    <Compile Include="Contracts\Gradient\IGradientIn.cs" />
+    <Compile Include="Contracts\Gradient\IGradientOut.cs" />
+    <Compile Include="Contracts\Histogram\ICumulativeHistogram.cs" />
+    <Compile Include="Contracts\Histogram\IGrayValueHistogram.cs" />
+    <Compile Include="Contracts\Histogram\IHistogramEqualiziation.cs" />
+    <Compile Include="Contracts\Misc\IImageCache.cs" />
+    <Compile Include="Contracts\Misc\IImageRepeater.cs" />
+    <Compile Include="Contracts\Misc\IReceiveImage.cs" />
+    <Compile Include="Contracts\Misc\ISendImage.cs" />
+    <Compile Include="Contracts\Operations\IAddition.cs" />
+    <Compile Include="Contracts\Operations\IROICenter.cs" />
+    <Compile Include="Contracts\Operations\ISubtraction.cs" />
+    <Compile Include="Contracts\Ranking\IClosing.cs" />
+    <Compile Include="Contracts\Ranking\IDilatation.cs" />
+    <Compile Include="Contracts\Ranking\IErodation.cs" />
+    <Compile Include="Contracts\Ranking\ILaplace.cs" />
+    <Compile Include="Contracts\Ranking\IMedian.cs" />
+    <Compile Include="Contracts\Ranking\IOpening.cs" />
+    <Compile Include="Contracts\Scan\IEllipseScan.cs" />
+    <Compile Include="Contracts\Scan\ILineScan.cs" />
+    <Compile Include="Contracts\Shapes\IShapeController.cs" />
+    <Compile Include="Contracts\LUT\ILookUpTable.cs" />
+    <Compile Include="Contracts\Portals\IPaintLeafPortal.cs" />
+    <Compile Include="Contracts\Portals\IShapeCollectorPortal.cs" />
+    <Compile Include="Contracts\Shapes\IShapeCollector.cs" />
+    <Compile Include="Contracts\Shapes\ISTEConnector.cs" />
+    <Compile Include="Contracts\Thresh\IThreshold.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IEBCExecutionTimeData.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IEBCMessageData.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IEBCOutputData.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IShapeInfoData.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IAddShapeMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IAvailableShapesMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IDisconnectEBCMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IEBCDebugMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IEBCMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IConnectEBCMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IEBCExceptionMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IErrorMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IExecuteFirstEBCMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IExecutionFinishedMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\ISTEConnectMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\WCF\ITransferMessage.cs" />
+    <Compile Include="Contracts\WCF\ITransferMessageClient.cs" />
+    <Compile Include="Contracts\WCF\ITransferMessageServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.Common\Twainsoft.ImageProcessing.Common.csproj">
+      <Project>{6905B7F8-675C-4E8C-84B8-EAAD89F51373}</Project>
+      <Name>Twainsoft.ImageProcessing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.IPLab\Twainsoft.ImageProcessing.IPLab.csproj">
+      <Project>{2EF29C7B-F337-4985-AC03-E6DE10F6D38E}</Project>
+      <Name>Twainsoft.ImageProcessing.IPLab</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.Shapes\Twainsoft.ImageProcessing.Shapes.csproj">
+      <Project>{A991266D-7D3B-4B57-B278-7F49A1CB25A1}</Project>
+      <Name>Twainsoft.ImageProcessing.Shapes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

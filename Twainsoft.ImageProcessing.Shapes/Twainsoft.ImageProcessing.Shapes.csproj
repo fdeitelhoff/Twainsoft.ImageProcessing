@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B9D0322F-F5B9-4C1D-B54D-6359906D60A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twainsoft.ImageProcessing.Shapes</RootNamespace>
+    <AssemblyName>Twainsoft.ImageProcessing.Shapes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Adapter\ImageLoadAdapterShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Adapter\ImageLoadAdapterShape.Designer.cs">
+      <DependentUpon>ImageLoadAdapterShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Adapter\ImageSaveAdapterShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Adapter\ImageSaveAdapterShape.Designer.cs">
+      <DependentUpon>ImageSaveAdapterShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\ShapeBaseInputPin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\ShapeBaseInputPin.Designer.cs">
+      <DependentUpon>ShapeBaseInputPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\ShapeBaseOutputPin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\ShapeBaseOutputPin.Designer.cs">
+      <DependentUpon>ShapeBaseOutputPin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Connection\ConnectionPointShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Connection\ConnectionPointShape.Designer.cs">
+      <DependentUpon>ConnectionPointShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Connection\ConnectionShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Connection\ConnectionShape.Designer.cs">
+      <DependentUpon>ConnectionShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\Adapter\FrmImageLoadAdapterShapeOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\Adapter\FrmImageLoadAdapterShapeOptions.Designer.cs">
+      <DependentUpon>FrmImageLoadAdapterShapeOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\Adapter\ImageTypeComboBoxItem.cs" />
+    <Compile Include="Components\Forms\Controls\UcLineScanSelection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\Controls\UcLineScanSelection.Designer.cs">
+      <DependentUpon>UcLineScanSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\FrmEllipseScanShapeOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\FrmEllipseScanShapeOptions.Designer.cs">
+      <DependentUpon>FrmEllipseScanShapeOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\FrmLineScanShapeOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\FrmLineScanShapeOptions.Designer.cs">
+      <DependentUpon>FrmLineScanShapeOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeDebugData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeDebugData.Designer.cs">
+      <DependentUpon>FrmShapeDebugData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeError.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeError.Designer.cs">
+      <DependentUpon>FrmShapeError.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeOptionsBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeOptionsBase.Designer.cs">
+      <DependentUpon>FrmShapeOptionsBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeWindowBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\FrmShapeWindowBase.Designer.cs">
+      <DependentUpon>FrmShapeWindowBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\Misc\CachedImageEventArgs.cs" />
+    <Compile Include="Components\Forms\Misc\FrmImageCacheShapeOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\Misc\FrmImageCacheShapeOptions.Designer.cs">
+      <DependentUpon>FrmImageCacheShapeOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Forms\Threshold\FrmThresholdShapeOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\Forms\Threshold\FrmThresholdShapeOptions.Designer.cs">
+      <DependentUpon>FrmThresholdShapeOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\LUT\LookUpTableShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\LUT\LookUpTableShape.Designer.cs">
+      <DependentUpon>LookUpTableShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Misc\ImageCacheShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Misc\ImageCacheShape.Designer.cs">
+      <DependentUpon>ImageCacheShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Misc\ImageRepeaterShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Misc\ImageRepeaterShape.Designer.cs">
+      <DependentUpon>ImageRepeaterShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Misc\ReceiveImageShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Misc\ReceiveImageShape.Designer.cs">
+      <DependentUpon>ReceiveImageShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Misc\SendImageShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Misc\SendImageShape.Designer.cs">
+      <DependentUpon>SendImageShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Scan\EllipseScanShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scan\EllipseScanShape.Designer.cs">
+      <DependentUpon>EllipseScanShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Scan\LineScanShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Scan\LineScanShape.Designer.cs">
+      <DependentUpon>LineScanShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Base\ShapeBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Base\ShapeBase.Designer.cs">
+      <DependentUpon>ShapeBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Thresh\ThreshholdShape.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\Thresh\ThreshholdShape.Designer.cs">
+      <DependentUpon>ThreshholdShape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\Vocabulary\Data\ShapeErrorData.cs" />
+    <Compile Include="Components\Vocabulary\Messages\EBCPinClickedMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\EllipseScanCoordinatesMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\LineScanCoordinatesMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\PaintObjectsMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\PaintRequestMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ShapeDraggedMessage.cs" />
+    <Compile Include="Contracts\Adapter\IImageLoadAdapterShape.cs" />
+    <Compile Include="Contracts\Adapter\IImageSaveAdapterShape.cs" />
+    <Compile Include="Contracts\Base\IShapeBasePin.cs" />
+    <Compile Include="Contracts\Connection\IConnectionPointShape.cs" />
+    <Compile Include="Contracts\Connection\IConnectionShape.cs" />
+    <Compile Include="Contracts\Misc\IImageCacheShape.cs" />
+    <Compile Include="Contracts\Misc\IImageRepeaterShape.cs" />
+    <Compile Include="Contracts\Misc\IReceiveImageShape.cs" />
+    <Compile Include="Contracts\Scan\IEllipseScanShape.cs" />
+    <Compile Include="Contracts\Scan\ILineScanShape.cs" />
+    <Compile Include="Contracts\Base\IShapeBase.cs" />
+    <Compile Include="Contracts\Threshold\IThresholdShape.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IShapeErrorData.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IEBCPinClickedMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IEllipseScanCoordinatesMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\ILineScanCoordinatesMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IPaintObjectsMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IPaintRequestMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IShapeDraggedMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Extensions\RectangleExtensions.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Components\Adapter\ImageLoadAdapterShape.resx">
+      <DependentUpon>ImageLoadAdapterShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Adapter\ImageSaveAdapterShape.resx">
+      <DependentUpon>ImageSaveAdapterShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\Adapter\FrmImageLoadAdapterShapeOptions.resx">
+      <DependentUpon>FrmImageLoadAdapterShapeOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\Controls\UcLineScanSelection.resx">
+      <DependentUpon>UcLineScanSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\FrmEllipseScanShapeOptions.resx">
+      <DependentUpon>FrmEllipseScanShapeOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\FrmLineScanShapeOptions.resx">
+      <DependentUpon>FrmLineScanShapeOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\FrmShapeDebugData.resx">
+      <DependentUpon>FrmShapeDebugData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\FrmShapeError.resx">
+      <DependentUpon>FrmShapeError.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\FrmShapeOptionsBase.resx">
+      <DependentUpon>FrmShapeOptionsBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\FrmShapeWindowBase.resx">
+      <DependentUpon>FrmShapeWindowBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\Misc\FrmImageCacheShapeOptions.resx">
+      <DependentUpon>FrmImageCacheShapeOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Forms\Threshold\FrmThresholdShapeOptions.resx">
+      <DependentUpon>FrmThresholdShapeOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Misc\ImageCacheShape.resx">
+      <DependentUpon>ImageCacheShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Misc\ImageRepeaterShape.resx">
+      <DependentUpon>ImageRepeaterShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Misc\ReceiveImageShape.resx">
+      <DependentUpon>ReceiveImageShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scan\EllipseScanShape.resx">
+      <DependentUpon>EllipseScanShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Scan\LineScanShape.resx">
+      <DependentUpon>LineScanShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Base\ShapeBase.resx">
+      <DependentUpon>ShapeBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\Thresh\ThreshholdShape.resx">
+      <DependentUpon>ThreshholdShape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.Common\Twainsoft.ImageProcessing.Common.csproj">
+      <Project>{6905B7F8-675C-4E8C-84B8-EAAD89F51373}</Project>
+      <Name>Twainsoft.ImageProcessing.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Twainsoft.ImageProcessing.GUI.Common\Twainsoft.ImageProcessing.GUI.Common.csproj">
+      <Project>{1EC5826D-3D1B-4503-A4E1-81D00A97E6C8}</Project>
+      <Name>Twainsoft.ImageProcessing.GUI.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

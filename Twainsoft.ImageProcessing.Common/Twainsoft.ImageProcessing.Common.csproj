@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6905B7F8-675C-4E8C-84B8-EAAD89F51373}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twainsoft.ImageProcessing.Common</RootNamespace>
+    <AssemblyName>Twainsoft.ImageProcessing.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\Vocabulary\Data\DebugData.cs" />
+    <Compile Include="Components\Vocabulary\Data\ImageTypes.cs" />
+    <Compile Include="Components\Vocabulary\Data\ThresholdData.cs" />
+    <Compile Include="Components\Vocabulary\Exceptions\WorkException.cs" />
+    <Compile Include="Components\Vocabulary\Messages\CachedImageMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ChangeDataBehaviourMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ChangePinStatusMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ChangeShapeStatusMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ExecutionTimeMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ImageTypeMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\RepeatCountChangedMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ShapeDebugMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ExceptionInfoMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\PinTypes.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ShapeModeMessage.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ShapeModes.cs" />
+    <Compile Include="Components\Vocabulary\Data\DataResultTypes.cs" />
+    <Compile Include="Components\Vocabulary\Messages\ThresholdMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IDebugData.cs" />
+    <Compile Include="Contracts\Vocabulary\Data\IThresholdData.cs" />
+    <Compile Include="Contracts\Vocabulary\Exceptions\IWorkException.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\ICachedImageMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IChangeDataBehaviourMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IChangePinStatusMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IChangeShapeStatusMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IExecutionTimeMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IImageTypeMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IRepeatCountChangedMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IShapeDebugMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IExceptionInfoMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IShapeModeMessage.cs" />
+    <Compile Include="Contracts\Vocabulary\Messages\IThresholdMessage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
